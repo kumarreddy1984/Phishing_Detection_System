@@ -1,0 +1,84 @@
+{
+    "dataset_size": 10000,
+    "train_size": 8000,
+    "test_size": 2000,
+    "best_rf_params": {
+        "max_depth": 25,
+        "min_samples_split": 5,
+        "n_estimators": 150
+    },
+    "best_lr_params": {
+        "C": 0.1,
+        "solver": "lbfgs"
+    },
+    "hybrid_type": "soft",
+    "metrics": {
+        "logistic_regression": {
+            "Accuracy": 0.8245,
+            "Precision": 0.8493003229278795,
+            "Recall": 0.789,
+            "Specificity": 0.86,
+            "F1-Score": 0.8180404354587869,
+            "ROC-AUC": 0.9088364999999999,
+            "TN": 860,
+            "FP": 140,
+            "FN": 211,
+            "TP": 789
+        },
+        "random_forest": {
+            "Accuracy": 0.929,
+            "Precision": 0.9368635437881874,
+            "Recall": 0.92,
+            "Specificity": 0.938,
+            "F1-Score": 0.9283551967709385,
+            "ROC-AUC": 0.9769625,
+            "TN": 938,
+            "FP": 62,
+            "FN": 80,
+            "TP": 920
+        },
+        "hybrid_voting": {
+            "Accuracy": 0.9065,
+            "Precision": 0.9274447949526814,
+            "Recall": 0.882,
+            "Specificity": 0.931,
+            "F1-Score": 0.9041517170681702,
+            "ROC-AUC": 0.9637104999999999,
+            "TN": 931,
+            "FP": 69,
+            "FN": 118,
+            "TP": 882
+        }
+    },
+    "cv_scores": {
+        "random_forest": {
+            "mean": 0.9233750000000001,
+            "std": 0.005071365693775178
+        },
+        "logistic_regression": {
+            "mean": 0.838125,
+            "std": 0.012132085558550911
+        },
+        "hybrid_voting": {
+            "mean": 0.905625,
+            "std": 0.0031622776601683863
+        }
+    },
+    "feature_importance": {
+        "url_length": 0.2373755864998116,
+        "has_https": 0.16957399690129046,
+        "hostname_length": 0.14407641480608682,
+        "num_path_levels": 0.1252175130282767,
+        "num_digits": 0.12208829699890249,
+        "num_dots": 0.045140483660521945,
+        "num_special_chars": 0.04426534226484063,
+        "num_hyphens": 0.038404242695095674,
+        "num_subdomains": 0.03287070257858752,
+        "suspicious_keyword": 0.027325021294775043,
+        "is_shortened": 0.00644484786219586,
+        "num_at": 0.004621477290914826,
+        "has_double_slash_redirect": 0.001502225677886741,
+        "has_ip": 0.0007193217740432647,
+        "has_port": 0.0003745266667704326
+    }
+}
